@@ -2,8 +2,19 @@
 
 **Cloud Native Fundamental Project**
 
+# Watch What App
+
 The purpose of this project is to create an application which allows viewers to see my reviews on tv shows that I have watched.
 Since the reviews will be based off shows I have watched, only I can add and review the shows.
+
+# Contents:
+1. [Summary](#Summary)
+    1. [Brief](#Brief)
+    2. Requirements
+    3. My Approach
+ 
+## Summary
+### Brief
 
 The reviews will list information such as:
 * Name of the show
