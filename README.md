@@ -89,8 +89,11 @@ This app will allow users to do the following:
 * Update their comment under a review (user who created comment) by making any changes
 * Delete comment or account (user: anyone).
 
+# Risk Assessment
+Link to the full risk assessment can be found here:
+[Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
 
-
+The screenshot of the risk assessment shows the potential risks that could occur from the app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
 
 
 
