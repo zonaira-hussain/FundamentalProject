@@ -9,7 +9,7 @@ The purpose of this project is to create an application which follows the requir
 The purpose of this app will help recommend shows to viewers based off my reviews. They will also have the option to create an account which will allow them to add or edit any comments under my reviews.
 
 =======
->>>>>>> 8566f5628258bb05a47fdf8a6637dac7e1589df4
+
 
 
 # Contents:
@@ -104,7 +104,7 @@ Link to the full risk assessment can be found here:
 [Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
 
 The screenshot of the risk assessment shows the potential risks that could occur from the app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
->>>>>>> 8566f5628258bb05a47fdf8a6637dac7e1589df4
+
 
 
 
