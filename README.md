@@ -5,23 +5,39 @@
 # Watch What App
 
 The purpose of this project is to create an application which follows the requirements listed in the brief and achieves the objective of the project. In order to accomplish this, I have decided to create an app called '*Watch What*' which allows viewers to see my reviews on tv shows that I have watched.
+<<<<<<< HEAD
 The purpose of this app will help recommend shows to viewers based off my reviews. They will also have the option to create an account which will allow them to add or edit any comments under my reviews.
 
+=======
+>>>>>>> 8566f5628258bb05a47fdf8a6637dac7e1589df4
 
 
 # Contents:
 1. [Introduction](#Introduction)
-    1. [Objective](#Objective)
-    2. [Requirements](#Requirements)
-    3. [Features in the App](#Features-in-the-App)
-    4. [Meeting the Objective](#Meeting-the-Objective)
- 
+    1. [Requirements](#Requirements)
+    2. [Features in the App](#Features-in-the-App)
+2. [Objective](#Objective)
+    1. [Meeting the Objective](#Meeting-the-Objective)
+3. [Architecture](#Architecture)
+4. [Jira Board](#Jira-Board)
+5. [Risk Assessment](#Risk-Assessment)
+6. Testing
+7. Future Improvements
+
 # Introduction
-## Objective
-The objective of this project is to create a CRUD application utilising the tools, methodologies and technologies discussed during the modules taught during training.
-This CRUD app will allow the user to create, read, update and delete items on the webapp.
+The purpose of the 'Watch What' app will help recommend shows to viewers based off my reviews. They will also have the option to create an account which will allow them to add or edit any comments under my reviews.
 
 ## Requirements
+The following is the minimum set of requirements for the project:
+* A Jira board with user stories, use cases and tasks.
+* Documentation describing the architecture used in the project.
+* Risk assessment.
+* Relational database used to store data from project.
+* Functional application.
+* Front-end website and integrated API.
+* Testing implementation.
+* Code integrated into a Version Control System.
+* Application deployed to a cloud-based virtual machine.
 
 ## Features in the App
 
@@ -45,9 +61,13 @@ Viewers of the app can create an account using their email address, a user-name 
 The app will have drop-down menus for 'Genre' and 'Rating'. 
 The app will automatically list shows in alphabetical order however, this can be changed to be sorted by highest rating or lowest rating. Users can also change the reviews they see based off the genre of the show. These features will allow users to customize the way they can view the list of shows.
 
-## Meeting the Objective
+# Objective
 
-In order to achieve the [objective](#Objective) , I have created a simple app called *Watch What*. This app will create a list of shows reviewed by myself. 
+The objective of this project is to create a CRUD application utilising the tools, methodologies and technologies discussed during the modules taught during training.
+This CRUD app will allow the user to create, read, update and delete items on the webapp.
+
+## Meeting the Objective
+In order to achieve the objectives, I have created a simple app called *Watch What*. This app will create a list of shows reviewed by myself. 
 This app will allow users to do the following:
 * Create a new review (user: me) which will include the following information:
     * Name of show
@@ -74,9 +94,17 @@ This app will allow users to do the following:
 * Update their comment under a review (user who created comment) by making any changes
 * Delete comment or account (user: anyone).
 
+<<<<<<< HEAD
 
 
 
+=======
+# Risk Assessment
+Link to the full risk assessment can be found here:
+[Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
+
+The screenshot of the risk assessment shows the potential risks that could occur from the app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
+>>>>>>> 8566f5628258bb05a47fdf8a6637dac7e1589df4
 
 
 
