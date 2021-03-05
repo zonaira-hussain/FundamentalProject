@@ -1,0 +1,83 @@
+.bodyForAll {
+    width: 100%;
+    background-image: radial-gradient(circle at center,#03151F 30%, #00536B 100%);
+    font-family:'Montserrat', sans-serif;
+    color: bisque;
+}
+.headerOne{
+    color: #00536B;
+    text-align: center;
+    
+}
+.frontPageNav{
+    position: relative;
+    margin: 300px auto 0;
+    width: 800px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 0;
+   
+}
+.frontPageNav a{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #006c8a;
+    text-decoration: none;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    border: solid 5px #006c8a;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    transition: 1s;
+
+}
+a:hover{
+    box-shadow: 0 5px 50px 0 #01a3cf inset, 0 5px 50px 0 #01a3cf,
+    0 5px 50px 0 #01a3cf,  0 5px 50px 0 #01a3cf;
+    text-shadow: 0 0 3px #01a3cf, 0 0 3px #01a3cf;
+}
+
+.frontPageNav a:nth-child(1){
+    width: 200px;
+}
+.frontPageNav a:nth-child(2){
+    width: 400px;
+}
+/* .frontPageNav a:nth-child(3){
+    width: 200px;
+}
+.frontPageNav a:nth-child(4){
+    width: 200px;
+} */
+.mainButton{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #006c8a;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: solid 5px #006c8a;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    transition: 1s;
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+}
+#searchBtnEdit{
+   border: none;
+   background-color: inherit;
+   color: bisque;
+   padding: 14px 28px;
+   font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+      
+}
+searchBtnEdit:hover {
+background-color: #00536B;
+color: #03151F;
+}

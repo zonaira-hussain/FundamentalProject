@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadAll</title>
+    <link rel="shortcut icon" href="project images/smallTV.ico">
+    <!-- link to css file -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- link to bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+    crossorigin="anonymous">
+</head>
+<body class="bodyForAll">
+
+    <h1 class="headerOne">LIST OF ALL THE REVIEWS</h1>
+<nav>
+        <a href="index.html" class="mainButton">home</a>
+        <a id="allBtn" class="mainButton">Read All</a>
+        <a class="mainButton" data-bs-toggle="modal" data-bs-target="#createModal">create</a>
+    <a class="mainButton" data-bs-toggle="modal" data-bs-target="#updateModal">Update</a>
+    <a class="mainButton" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</a>
+    <a class="mainButton" href="readAll.html">Clear</a>
+</nav>
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create new review</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input class="inputBoxes" type="text" id="title" placeholder="Title of Show">
+          <input type="text" id="genre" placeholder="Genre of the show">
+          <select id="rating">
+            <option type="number">1</option>
+            <option type="number">2</option>
+            <option type="number">3</option>
+            <option type="number">4</option>
+            <option type="number">5</option>
+          </select>
+          <input type="text" placeholder="Leave a comment here" id="summary"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="createBtn">Submit Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Delete review by review ID</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+             <input type="number" id="reviewIdForDel" placeholder="Enter the review ID">
+             <div class="modal-footer">
+                <button type="button" class="delBtn">Delete Review</button> 
+         </div>
+        </div>
+    </div></div></div>
+
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">update review</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <input type="number" id="updateId" placeholder="enter review ID">
+              <input class="inputBoxes" type="text" id="updatedTitle" placeholder="Title of Show">
+              <input type="text" id="updatedGenre" placeholder="Genre of the show">
+              <select id="updatedRating">
+                <option type="number">1</option>
+                <option type="number">2</option>
+                <option type="number">3</option>
+                <option type="number">4</option>
+                <option type="number">5</option>
+              </select>
+              <input type="text" placeholder="Leave a comment here" id="updatedSummary"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="updateBtn">Update Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+<div class="container">
+    <div class="row">
+        <div class="col">
+    <form>
+        <input type="text" placeholder="Search by Genre" id="genreSearch">
+    </form>
+    <button class="readByGenreBtn" id="searchBtnEdit">Search by Genre</button>
+</div>
+<div class="col">
+    <form>
+        <input type="text" placeholder="Search by Title" id="titleSearch">
+    </form>
+    <button class="readByTitleBtn" id="searchBtnEdit">Search by Title</button>
+</div>
+<div class="col">
+    <form>
+        <input type="number" placeholder="Search by id..." id="idSearch">
+    </form>
+    <button class="readByIdBtn" id="searchBtnEdit">Search by Review ID</button>
+</div>
+</div>
+</div>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Rating</th>
+        <th>Summary</th>
+    </tr>
+    <tr class="readAllTable">
+        
+    </tr>
+        
+</table>
+
+
+
+
+
+   
+    
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+    crossorigin="anonymous"></script>
+    <script src="readAll.js"></script>
+    <!-- <script src="create.js"></script> -->
+</body>
+</html>
