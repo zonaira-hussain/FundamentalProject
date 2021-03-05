@@ -50,7 +50,7 @@ let readAllReviews = function(data){
 
 
 let readAllFn = function(){
-fetch(`https://jsonplaceholder.typicode.com/users`)
+fetch(`https://localhost:9090/reviews/readAll`)
     .then((response) =>{
         if (response.status !== 200){
             console.log(`status: ${response.status}`);
@@ -70,7 +70,7 @@ readAllbtn.addEventListener('click', readAllFn);
 
 let id = idSearch.value;
 let readById = function(){
-fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+fetch(`https://localhost:9090/reviews/read/${id}`)
 .then((response) => {
     if (response.status !== 200) {
         console.log(`Status ${response.status}`);
@@ -92,7 +92,7 @@ readByIdbtn.addEventListener('click',(event) => {
 });
 
 let readByGenreFn = function(){
-    fetch(`https://jsonplaceholder.typicode.com/posts/${genreSearch}`)
+    fetch(`https://localhost:9090/reviews/read/byGenre/${genreSearch}`)
     .then((response) => {
         if (response.status !== 200) {
             console.log(`Status ${response.status}`);
@@ -110,7 +110,7 @@ let readByGenreFn = function(){
 readByGenreBtn.addEventListener('click', readByGenreFn);
 
 let readByTitleFn = function(){
-    fetch(`https://jsonplaceholder.typicode.com/posts/${titleSearch}`)
+    fetch(`https://localhost:9090/reviews/read/byTitle/${titleSearch}`)
     .then((response) => {
         if (response.status !== 200) {
             console.log(`Status ${response.status}`);
@@ -160,7 +160,7 @@ let PostReview = function() {
 
 let createNewReview = function() {
 
-    fetch(`http://jsonplaceholder.typicode.com/posts`,{
+    fetch(`https://localhost:9090/reviews/create`,{
         method: `POST`,
         headers: {
             "Content-type":"application/json"
@@ -188,7 +188,7 @@ let createNewReview = function() {
 
 let delId = reviewIdForDel.value;
 let deleteFunction = function(){
-    fetch(`http:...review/delete/${delId}`,{
+    fetch(`https://localhost:9090/reviews/delete/${delId}`,{
         method:`DELETE`
     })
     .then((data) => console.log(`Review with this id: ${data}`))
@@ -206,7 +206,7 @@ let updatedReview = {
 
 function updateFunction(){
 
-    fetch(`http..../review/${updateId}`, {
+    fetch(`https://localhost:9090/reviews/update/${updateId}`, {
       method: 'PUT',
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify(updatedReview)
