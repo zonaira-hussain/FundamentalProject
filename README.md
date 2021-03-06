@@ -66,10 +66,19 @@ This app will allow users to do the following:
     * Making any corrections (i.e. Grammar, spelling etc.)
 * Delete any reviews that have been uploaded (user: me)
 
+## Jira Board
 
+The following is a screenshot of my Jira board:
+![image](https://user-images.githubusercontent.com/78487653/110219805-4238cb80-7eb9-11eb-92ae-901943b3360e.png)
 
+Jira is one of the leading technologies in agile project management. 
+I used a Jira board during the planning part of the application. This helped me plan out the tasks I had to do to complete my project. I was able to create user stories with smaller tasks attached to each. By splitting the tasks up into smaller tasks, I was able to estimate the length of time each user story and sprint will take to complete.
 
-
+To each user story, I added a label which represents MoSCoW prioritisations.
+M - Must have,
+S - Should have,
+C - Could have,
+W - Would like to have.
 
 
 # Risk Assessment
@@ -77,6 +86,9 @@ Link to the full risk assessment can be found here:
 [Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
 
 The screenshot of the risk assessment shows the potential risks that could occur from the app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
+
+![image](https://user-images.githubusercontent.com/78487653/110219272-24b63280-7eb6-11eb-87b6-50c39ae5c2a6.png)
+
 
 
 
