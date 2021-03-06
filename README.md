@@ -19,7 +19,7 @@ The purpose of this app will help recommend shows to viewers based off my review
 3. [Architecture](#Architecture)
 4. [Jira Board](#Jira-Board)
 5. [Risk Assessment](#Risk-Assessment)
-6. Testing
+6. [Testing](#Testing)
 7. Future Improvements
 
 # Introduction
@@ -66,6 +66,10 @@ This app will allow users to do the following:
     * Making any corrections (i.e. Grammar, spelling etc.)
 * Delete any reviews that have been uploaded (user: me)
 
+## Architecture 
+
+To create the front-end of my application, I used HTML with CSS to create and design the web-page. I used JavaScript to make my app interactive for users and allow CRUD operations to be created through JS Http reuests.
+
 ## Jira Board
 
 The following is a screenshot of my Jira board:
@@ -90,8 +94,15 @@ The screenshot of the risk assessment shows the potential risks that could occur
 ![image](https://user-images.githubusercontent.com/78487653/110219272-24b63280-7eb6-11eb-87b6-50c39ae5c2a6.png)
 
 
+## Testing 
+![image](https://user-images.githubusercontent.com/78487653/110221835-50411900-7ec6-11eb-8fca-25f9978ce4e7.png)
 
+For testing I used Mockito. This makes Spring create a mocked version of an object so the real method doesn't have to be called.
+Mockito follows the given-when-then system for testing.  
 
+![image](https://user-images.githubusercontent.com/78487653/110222508-a021df00-7eca-11eb-86ed-1c2f8d325166.png)
+
+A high test coverage ensures majority of the code has been used. This follows good design principles as it ensures only code that is being used is contained in the file.
 
 
 
