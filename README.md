@@ -70,9 +70,29 @@ This app will allow users to do the following:
 
 To create the front-end of my application, I used HTML with CSS to create and design the web-page. I used JavaScript to make my app interactive for users and allow CRUD operations to be created through JS Http reuests.
 
+Front-end:
+* HTML
+* CSS
+* JS
+* bootstrap
+
+Back-end: 
+* Java programming language
+* Maven
+* Spring boot
+
+Testing:
+* JUnit
+* Mockito
+
+Data-Base:
+* GCP managed SQL server
+* H2 
+
 ## Jira Board
 
 The following is a screenshot of my Jira board:
+
 ![image](https://user-images.githubusercontent.com/78487653/110219805-4238cb80-7eb9-11eb-92ae-901943b3360e.png)
 
 Jira is one of the leading technologies in agile project management. 
@@ -87,6 +107,7 @@ W - Would like to have.
 
 # Risk Assessment
 Link to the full risk assessment can be found here:
+
 [Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
 
 The screenshot of the risk assessment shows the potential risks that could occur from the app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
@@ -95,6 +116,7 @@ The screenshot of the risk assessment shows the potential risks that could occur
 
 
 ## Testing 
+
 ![image](https://user-images.githubusercontent.com/78487653/110221835-50411900-7ec6-11eb-8fca-25f9978ce4e7.png)
 
 For testing I used Mockito. This makes Spring create a mocked version of an object so the real method doesn't have to be called.
