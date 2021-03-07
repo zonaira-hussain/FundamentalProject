@@ -113,7 +113,9 @@ readAllbtn.addEventListener('click', readAllFn);
 
 let id = idSearch.value;
 let readById = function(){
+
 fetch(`http://localhost:9090/reviews/read/${id}`)
+
 .then((response) => {
     if (response.status !== 200) {
         console.log(`Status ${response.status}`);
@@ -237,7 +239,9 @@ let updatedReview = {
 
 function updateFunction(){
 
+
     fetch(`http://localhost:9090/reviews/update/${updateId}`, {
+
       method: 'PUT',
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify(updatedReview)
