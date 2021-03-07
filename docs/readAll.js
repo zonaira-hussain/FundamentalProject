@@ -48,9 +48,49 @@ let readAllReviews = function(data){
     }
 
 
+let showTable = function(data){
+    let tab = `<tr> 
+<th>ReviewID</th> 
+<th>Title</th> 
+<th>Genre</th> 
+<th>Rating</th> 
+<th>Summary</th> 
+</tr>`;
+for (let r of data){
+    tab += `<tr>  
+    <td>${r.reviewID} </td> 
+    <td>${r.title} </td> 
+    <td>${r.genre}</td> 
+    <td>${r.rating}</td>  
+    <td>${r.summary}</td>  
+               
+</tr>`;
+}
+document.getElementById("reviewsTable").innerHTML = tab;
+}
+// let showTest = function(data){
+//     let tab = `<tr> 
+// <th>Name</th> 
+// <th>username</th> 
+// <th>email</th> 
+// <th>Salary</th> 
+// </tr>`;
+// for (let r of data){
+//     tab += `<tr>  
+//     <td>${r.name} </td> 
+//     <td>${r.username}</td> 
+//     <td>${r.email}</td>  
+               
+// </tr>`;
+// }
+// document.getElementById("employees").innerHTML = tab;
+// }https://jsonplaceholder.typicode.com/users
+
+
+
 
 let readAllFn = function(){
-fetch(`https://localhost:9090/reviews/readAll`)
+fetch(`http://localhost:9090/reviews/readAll`)
     .then((response) =>{
         if (response.status !== 200){
             console.log(`status: ${response.status}`);
@@ -58,19 +98,22 @@ fetch(`https://localhost:9090/reviews/readAll`)
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            // for(let i of data){
+            //     readAllReviews(i);
+            // }
+            console.log(`fingers crossed ${data}`);
+            showTable(data);
         })
         .catch((error) => console.log(`${error}`))
     })
 }
+
     
 readAllbtn.addEventListener('click', readAllFn);
 
 let id = idSearch.value;
 let readById = function(){
-fetch(`https://localhost:9090/reviews/read/${id}`)
+fetch(`http://localhost:9090/reviews/read/${id}`)
 .then((response) => {
     if (response.status !== 200) {
         console.log(`Status ${response.status}`);
@@ -78,9 +121,7 @@ fetch(`https://localhost:9090/reviews/read/${id}`)
     }
     response.json()
     .then((data)=>{
-        for(let i of data){
-            readAllReviews(i);
-        }
+        showTable(data);
     })
     .catch((error) => console.log(`Error ${error}`));
 })
@@ -92,7 +133,7 @@ readByIdbtn.addEventListener('click',(event) => {
 });
 
 let readByGenreFn = function(){
-    fetch(`https://localhost:9090/reviews/read/byGenre/${genreSearch}`)
+    fetch(`http://localhost:9090/reviews/read/byGenre/${genreSearch}`)
     .then((response) => {
         if (response.status !== 200) {
             console.log(`Status ${response.status}`);
@@ -100,9 +141,7 @@ let readByGenreFn = function(){
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            showTable(data);
         })
         .catch((error) => console.log(`Error ${error}`));
     }) 
@@ -110,7 +149,7 @@ let readByGenreFn = function(){
 readByGenreBtn.addEventListener('click', readByGenreFn);
 
 let readByTitleFn = function(){
-    fetch(`https://localhost:9090/reviews/read/byTitle/${titleSearch}`)
+    fetch(`http://localhost:9090/reviews/read/byTitle/${titleSearch}`)
     .then((response) => {
         if (response.status !== 200) {
             console.log(`Status ${response.status}`);
@@ -118,21 +157,13 @@ let readByTitleFn = function(){
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            showTable(data);
         })
         .catch((error) => console.log(`Error ${error}`));
     }) 
 }
 readByTitleBtn.addEventListener('click',readByTitleFn);
 
-// const newReview = {
-//     title:document.getElementById('title').value,
-//     genre:document.getElementById('genre').value,
-//     rating:document.getElementById('rating').value,
-//     summary:document.getElementById('summary').value
-// }
 
 let newReview = {
     "title":title1,
@@ -160,7 +191,7 @@ let PostReview = function() {
 
 let createNewReview = function() {
 
-    fetch(`https://localhost:9090/reviews/create`,{
+    fetch(`http://localhost:9090/reviews/create`,{
         method: `POST`,
         headers: {
             "Content-type":"application/json"
@@ -188,7 +219,7 @@ let createNewReview = function() {
 
 let delId = reviewIdForDel.value;
 let deleteFunction = function(){
-    fetch(`https://localhost:9090/reviews/delete/${delId}`,{
+    fetch(`http://localhost:9090/reviews/delete/${delId}`,{
         method:`DELETE`
     })
     .then((data) => console.log(`Review with this id: ${data}`))
@@ -206,7 +237,7 @@ let updatedReview = {
 
 function updateFunction(){
 
-    fetch(`https://localhost:9090/reviews/update/${updateId}`, {
+    fetch(`http://localhost:9090/reviews/update/${updateId}`, {
       method: 'PUT',
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify(updatedReview)
