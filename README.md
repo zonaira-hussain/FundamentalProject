@@ -20,7 +20,7 @@ The purpose of this app will help recommend shows to viewers based off my review
 4. [Jira Board](#Jira-Board)
 5. [Risk Assessment](#Risk-Assessment)
 6. [Testing](#Testing)
-7. Future Improvements
+7. [Front End](#Front-End)
 
 # Introduction
 The purpose of the 'Watch What' app will help recommend shows to viewers based off my reviews.
@@ -89,6 +89,11 @@ Data-Base:
 * GCP managed SQL server
 * H2 
 
+I created a UML diagram which describes the structure of the system and shows the relationship between objects:
+
+![image](https://user-images.githubusercontent.com/78487653/110242042-000c9a00-7f4c-11eb-9b3a-ce1e3b94ecdd.png)
+
+
 ## Jira Board
 
 The following is a screenshot of my Jira board:
@@ -125,6 +130,18 @@ Mockito follows the given-when-then system for testing.
 ![image](https://user-images.githubusercontent.com/78487653/110222508-a021df00-7eca-11eb-86ed-1c2f8d325166.png)
 
 A high test coverage ensures majority of the code has been used. This follows good design principles as it ensures only code that is being used is contained in the file.
+
+
+## Front End
+
+As the main user of the web application is myself, I decided to design the app with this in mine but also relate it to the topic I chose for this project by adding a tv image to the background. This way, users are aware the reviews are for tv programmes.
+
+![image](https://user-images.githubusercontent.com/78487653/110242663-00f2fb00-7f4f-11eb-9aff-f6c1500e83c3.png)
+
+Users can then navigate to the next page which is where all the CRUD operations can be carried out. The buttons and forms provide information on what information to add and where which makes it user-friendly.
+
+![image](https://user-images.githubusercontent.com/78487653/110242729-4283a600-7f4f-11eb-86f5-3d72c6562cbf.png)
+
 
 
 
