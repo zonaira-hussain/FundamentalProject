@@ -16,7 +16,7 @@
 </head>
 <body class="bodyForAll">
 
-    <h1 class="headerOne">LIST OF ALL THE REVIEWS</h1>
+    <h1 class="headerOne">REVIEWS</h1>
 <nav>
         <a href="index.html" class="mainButton">home</a>
         <a id="allBtn" class="mainButton">Read All</a>
@@ -34,7 +34,8 @@
         </div>
         <div class="modal-body">
           <input class="inputBoxes" type="text" id="title" placeholder="Title of Show">
-          <input type="text" id="genre" placeholder="Genre of the show">
+          <input class="inputBoxes" type="text" id="genre" placeholder="Genre of the show">
+          <label for="rating">Select a Rating: </label>
           <select id="rating">
             <option type="number">1</option>
             <option type="number">2</option>
@@ -42,7 +43,7 @@
             <option type="number">4</option>
             <option type="number">5</option>
           </select>
-          <input type="text" placeholder="Leave a comment here" id="summary"></textarea>
+          <input class="inputBoxes" type="text" placeholder="Leave a comment here" id="summary"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="createBtn">Submit Review</button>
@@ -59,7 +60,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
          </div>
          <div class="modal-body">
-             <input type="number" id="reviewIdForDel" placeholder="Enter the review ID">
+             <input class="inputBoxes" type="number" id="reviewIdForDel" placeholder="Enter the review ID">
              <div class="modal-footer">
                 <button type="button" class="delBtn">Delete Review</button> 
          </div>
@@ -74,9 +75,10 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <input type="number" id="updateId" placeholder="enter review ID">
+            <input class="inputBoxes" type="number" id="updateId" placeholder="enter review ID">
               <input class="inputBoxes" type="text" id="updatedTitle" placeholder="Title of Show">
-              <input type="text" id="updatedGenre" placeholder="Genre of the show">
+              <input class="inputBoxes" type="text" id="updatedGenre" placeholder="Genre of the show">
+              <label for="updatedRating">Select a Rating: </label>
               <select id="updatedRating">
                 <option type="number">1</option>
                 <option type="number">2</option>
@@ -84,7 +86,7 @@
                 <option type="number">4</option>
                 <option type="number">5</option>
               </select>
-              <input type="text" placeholder="Leave a comment here" id="updatedSummary"></textarea>
+              <input class="inputBoxes" type="text" placeholder="Leave a comment here" id="updatedSummary"></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="updateBtn">Update Review</button>
@@ -98,36 +100,29 @@
     <div class="row">
         <div class="col">
     <form>
-        <input type="text" placeholder="Search by Genre" id="genreSearch">
+        <input class="inputBoxes" type="text" placeholder="Search by Genre" id="genreSearch">
     </form>
     <button class="readByGenreBtn" id="searchBtnEdit">Search by Genre</button>
 </div>
 <div class="col">
     <form>
-        <input type="text" placeholder="Search by Title" id="titleSearch">
+        <input class="inputBoxes" type="text" placeholder="Search by Title" id="titleSearch">
     </form>
     <button class="readByTitleBtn" id="searchBtnEdit">Search by Title</button>
 </div>
 <div class="col">
     <form>
-        <input type="number" placeholder="Search by id..." id="idSearch">
+        <input class="inputBoxes" type="number" placeholder="Search by ID..." id="idSearch">
     </form>
     <button class="readByIdBtn" id="searchBtnEdit">Search by Review ID</button>
 </div>
 </div>
 </div>
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Rating</th>
-        <th>Summary</th>
-    </tr>
-    <tr class="readAllTable">
-        
-    </tr>
-        
+<div class="container">
+<table width=100% id="reviewsTable">      
 </table>
+</div>
+<br>
 
 
 

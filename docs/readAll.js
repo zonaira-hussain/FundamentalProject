@@ -48,6 +48,46 @@ let readAllReviews = function(data){
     }
 
 
+let showTable = function(data){
+    let tab = `<tr> 
+<th>ReviewID</th> 
+<th>Title</th> 
+<th>Genre</th> 
+<th>Rating</th> 
+<th>Summary</th> 
+</tr>`;
+for (let r of data){
+    tab += `<tr>  
+    <td>${r.reviewID} </td> 
+    <td>${r.title} </td> 
+    <td>${r.genre}</td> 
+    <td>${r.rating}</td>  
+    <td>${r.summary}</td>  
+               
+</tr>`;
+}
+document.getElementById("reviewsTable").innerHTML = tab;
+}
+// let showTest = function(data){
+//     let tab = `<tr> 
+// <th>Name</th> 
+// <th>username</th> 
+// <th>email</th> 
+// <th>Salary</th> 
+// </tr>`;
+// for (let r of data){
+//     tab += `<tr>  
+//     <td>${r.name} </td> 
+//     <td>${r.username}</td> 
+//     <td>${r.email}</td>  
+               
+// </tr>`;
+// }
+// document.getElementById("employees").innerHTML = tab;
+// }https://jsonplaceholder.typicode.com/users
+
+
+
 
 let readAllFn = function(){
 fetch(`http://localhost:9090/reviews/readAll`)
@@ -58,19 +98,24 @@ fetch(`http://localhost:9090/reviews/readAll`)
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            // for(let i of data){
+            //     readAllReviews(i);
+            // }
+            console.log(`fingers crossed ${data}`);
+            showTable(data);
         })
         .catch((error) => console.log(`${error}`))
     })
 }
+
     
 readAllbtn.addEventListener('click', readAllFn);
 
 let id = idSearch.value;
 let readById = function(){
-fetch(`http://localhost:9090/reviews/read/byId/${id}`)
+
+fetch(`http://localhost:9090/reviews/read/${id}`)
+
 .then((response) => {
     if (response.status !== 200) {
         console.log(`Status ${response.status}`);
@@ -78,9 +123,7 @@ fetch(`http://localhost:9090/reviews/read/byId/${id}`)
     }
     response.json()
     .then((data)=>{
-        for(let i of data){
-            readAllReviews(i);
-        }
+        showTable(data);
     })
     .catch((error) => console.log(`Error ${error}`));
 })
@@ -100,9 +143,7 @@ let readByGenreFn = function(){
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            showTable(data);
         })
         .catch((error) => console.log(`Error ${error}`));
     }) 
@@ -118,21 +159,13 @@ let readByTitleFn = function(){
         }
         response.json()
         .then((data)=>{
-            for(let i of data){
-                readAllReviews(i);
-            }
+            showTable(data);
         })
         .catch((error) => console.log(`Error ${error}`));
     }) 
 }
 readByTitleBtn.addEventListener('click',readByTitleFn);
 
-// const newReview = {
-//     title:document.getElementById('title').value,
-//     genre:document.getElementById('genre').value,
-//     rating:document.getElementById('rating').value,
-//     summary:document.getElementById('summary').value
-// }
 
 let newReview = {
     "title":title1,
@@ -206,7 +239,9 @@ let updatedReview = {
 
 function updateFunction(){
 
-    fetch(`http://localhost:9090/reviews/${updateId}`, {
+
+    fetch(`http://localhost:9090/reviews/update/${updateId}`, {
+
       method: 'PUT',
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify(updatedReview)
